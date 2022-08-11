@@ -1,0 +1,42 @@
+.todoscontainer {
+  margin-top: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  color: rgb(144, 144, 144);
+
+  &__thead {
+    text-align: left;
+    letter-spacing: 2px;
+
+    &__tr {
+      &__tarea,
+      &__prioridad,
+      &__accion {
+        width: 10%;
+        font-weight: 300;
+        color: white;
+      }
+
+      &__prioridad,
+      &__accion {
+        text-align: center;
+      }
+
+      &__descripcion {
+        width: 70%;
+        text-align: left;
+        font-weight: 300;
+        color: white;
+      }
+    }
+  }
+}
+
+.todoscontainer__thead__tr {
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+
+.no-todos-message {
+  font-style: italic;
+}

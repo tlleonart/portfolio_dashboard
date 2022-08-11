@@ -1,0 +1,13 @@
+.greetings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__h1 {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 46px;
+    color: white;
+    letter-spacing: 1px;
+  }
+}

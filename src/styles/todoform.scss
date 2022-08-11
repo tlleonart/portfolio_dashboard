@@ -1,0 +1,55 @@
+.todoform {
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+
+  &__title {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: rgb(144, 144, 144);
+    margin-left: 13px;
+  }
+
+  &__name,
+  &__description,
+  &__select {
+    height: 3rem;
+    font-size: 1.3rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    padding: 5px 0;
+  }
+
+  &__description {
+    width: 700px;
+  }
+
+  &__select {
+    margin-left: 13px;
+  }
+
+  &__btn {
+    color: rgb(144, 144, 144);
+    background-color: transparent;
+    border: 1px solid rgb(118, 118, 1);
+    height: 3rem;
+    width: 200px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+}
+
+.todoform__form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.form-left {
+  display: flex;
+  align-items: flex-start;
+}
