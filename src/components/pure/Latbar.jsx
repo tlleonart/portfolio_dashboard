@@ -2,9 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import thumbnail from "../../assets/Foto.jpg";
 import "../../styles/latbar.scss";
+import { NavLink } from "react-router-dom";
 
 const Latbar = () => {
-  // TODO: Recibir los menúes disponibles desde la base de datos
+  let activeStyle = {
+    borderLeft: "3px solid gray",
+    paddingLeft: "10px",
+  };
 
   return (
     <div className="latbar">
@@ -18,11 +22,51 @@ const Latbar = () => {
       </div>
       <nav className="latbar__nav">
         <ul className="latbar__nav__ul">
-          <li className="latbar__nav__ul__li">Dashboard</li>
-          <li className="latbar__nav__ul__li">Base de Datos</li>
-          <li className="latbar__nav__ul__li">Acciones</li>
-          <li className="latbar__nav__ul__li">Configuración</li>
-          <li className="latbar__nav__ul__li">Tareas</li>
+          <li className="latbar__nav__ul__li">
+            <NavLink
+              className="latbar__nav__ul__li__navlink"
+              to="/"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              Dashboard{" "}
+            </NavLink>
+          </li>
+          <li className="latbar__nav__ul__li">
+            <NavLink
+              className="latbar__nav__ul__li__navlink"
+              to="database"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              Base de Datos{" "}
+            </NavLink>
+          </li>
+          <li className="latbar__nav__ul__li">
+            <NavLink
+              className="latbar__nav__ul__li__navlink"
+              to="actions"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              Acciones{" "}
+            </NavLink>
+          </li>
+          <li className="latbar__nav__ul__li">
+            <NavLink
+              className="latbar__nav__ul__li__navlink"
+              to="config"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              Configuración{" "}
+            </NavLink>
+          </li>
+          <li className="latbar__nav__ul__li">
+            <NavLink
+              className="latbar__nav__ul__li__navlink"
+              to="todos"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              Tareas{" "}
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </div>

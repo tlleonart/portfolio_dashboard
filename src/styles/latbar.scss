@@ -53,6 +53,17 @@
         text-indent: 0;
         text-decoration: none;
         cursor: pointer;
+
+        &__navlink {
+          text-decoration: none;
+          width: 100%;
+          color: white;
+
+          &:hover {
+            color: white;
+            font-weight: 600;
+          }
+        }
       }
     }
   }
